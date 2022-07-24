@@ -1,0 +1,9 @@
+D:\YungChing\YungChingWebAPI\RepositoryModel\bin\Debug\netstandard2.0\RepositoryModel.deps.json
+D:\YungChing\YungChingWebAPI\RepositoryModel\bin\Debug\netstandard2.0\RepositoryModel.dll
+D:\YungChing\YungChingWebAPI\RepositoryModel\bin\Debug\netstandard2.0\RepositoryModel.pdb
+D:\YungChing\YungChingWebAPI\RepositoryModel\obj\Debug\netstandard2.0\RepositoryModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\YungChing\YungChingWebAPI\RepositoryModel\obj\Debug\netstandard2.0\RepositoryModel.AssemblyInfoInputs.cache
+D:\YungChing\YungChingWebAPI\RepositoryModel\obj\Debug\netstandard2.0\RepositoryModel.AssemblyInfo.cs
+D:\YungChing\YungChingWebAPI\RepositoryModel\obj\Debug\netstandard2.0\RepositoryModel.csproj.CoreCompileInputs.cache
+D:\YungChing\YungChingWebAPI\RepositoryModel\obj\Debug\netstandard2.0\RepositoryModel.dll
+D:\YungChing\YungChingWebAPI\RepositoryModel\obj\Debug\netstandard2.0\RepositoryModel.pdb

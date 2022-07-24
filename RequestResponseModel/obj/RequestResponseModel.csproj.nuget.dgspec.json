@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WebAPI\\YungChing\\YungChingWebAPI\\RequestResponseModel\\RequestResponseModel.csproj": {}
+    "D:\\YungChing\\YungChingWebAPI\\RequestResponseModel\\RequestResponseModel.csproj": {}
   },
   "projects": {
-    "D:\\WebAPI\\YungChing\\YungChingWebAPI\\RequestResponseModel\\RequestResponseModel.csproj": {
+    "D:\\YungChing\\YungChingWebAPI\\RequestResponseModel\\RequestResponseModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WebAPI\\YungChing\\YungChingWebAPI\\RequestResponseModel\\RequestResponseModel.csproj",
+        "projectUniqueName": "D:\\YungChing\\YungChingWebAPI\\RequestResponseModel\\RequestResponseModel.csproj",
         "projectName": "RequestResponseModel",
-        "projectPath": "D:\\WebAPI\\YungChing\\YungChingWebAPI\\RequestResponseModel\\RequestResponseModel.csproj",
+        "projectPath": "D:\\YungChing\\YungChingWebAPI\\RequestResponseModel\\RequestResponseModel.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\WebAPI\\YungChing\\YungChingWebAPI\\RequestResponseModel\\obj\\",
+        "outputPath": "D:\\YungChing\\YungChingWebAPI\\RequestResponseModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

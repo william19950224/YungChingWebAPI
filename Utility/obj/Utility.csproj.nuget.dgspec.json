@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WebAPI\\YungChing\\YungChingWebAPI\\Utility\\Utility.csproj": {}
+    "D:\\YungChing\\YungChingWebAPI\\Utility\\Utility.csproj": {}
   },
   "projects": {
-    "D:\\WebAPI\\YungChing\\YungChingWebAPI\\Utility\\Utility.csproj": {
+    "D:\\YungChing\\YungChingWebAPI\\Utility\\Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WebAPI\\YungChing\\YungChingWebAPI\\Utility\\Utility.csproj",
+        "projectUniqueName": "D:\\YungChing\\YungChingWebAPI\\Utility\\Utility.csproj",
         "projectName": "Utility",
-        "projectPath": "D:\\WebAPI\\YungChing\\YungChingWebAPI\\Utility\\Utility.csproj",
+        "projectPath": "D:\\YungChing\\YungChingWebAPI\\Utility\\Utility.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\WebAPI\\YungChing\\YungChingWebAPI\\Utility\\obj\\",
+        "outputPath": "D:\\YungChing\\YungChingWebAPI\\Utility\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

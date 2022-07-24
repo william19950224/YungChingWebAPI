@@ -1,0 +1,9 @@
+D:\YungChing\YungChingWebAPI\RequestResponseModel\bin\Debug\netstandard2.0\RequestResponseModel.deps.json
+D:\YungChing\YungChingWebAPI\RequestResponseModel\bin\Debug\netstandard2.0\RequestResponseModel.dll
+D:\YungChing\YungChingWebAPI\RequestResponseModel\bin\Debug\netstandard2.0\RequestResponseModel.pdb
+D:\YungChing\YungChingWebAPI\RequestResponseModel\obj\Debug\netstandard2.0\RequestResponseModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\YungChing\YungChingWebAPI\RequestResponseModel\obj\Debug\netstandard2.0\RequestResponseModel.AssemblyInfoInputs.cache
+D:\YungChing\YungChingWebAPI\RequestResponseModel\obj\Debug\netstandard2.0\RequestResponseModel.AssemblyInfo.cs
+D:\YungChing\YungChingWebAPI\RequestResponseModel\obj\Debug\netstandard2.0\RequestResponseModel.csproj.CoreCompileInputs.cache
+D:\YungChing\YungChingWebAPI\RequestResponseModel\obj\Debug\netstandard2.0\RequestResponseModel.dll
+D:\YungChing\YungChingWebAPI\RequestResponseModel\obj\Debug\netstandard2.0\RequestResponseModel.pdb

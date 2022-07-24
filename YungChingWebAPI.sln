@@ -15,15 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Model", "04.Model", "{16
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05.INFRASTURCTURE", "05.INFRASTURCTURE", "{DFB86CCB-62AF-496E-B418-63117165F75D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicService", "LogicService\LogicService.csproj", "{C3EBC407-ABCB-40A3-923D-43E08A6FA3D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicService", "LogicService\LogicService.csproj", "{C3EBC407-ABCB-40A3-923D-43E08A6FA3D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataService", "DataService\DataService.csproj", "{6C5651C8-72B0-4562-8C8E-0BDC7D2749DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryService", "DataService\RepositoryService.csproj", "{6C5651C8-72B0-4562-8C8E-0BDC7D2749DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryModel", "RepositoryModel\RepositoryModel.csproj", "{CCB73EF2-4FA9-4DD2-9D0F-DAB888C0650B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryModel", "RepositoryModel\RepositoryModel.csproj", "{CCB73EF2-4FA9-4DD2-9D0F-DAB888C0650B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestResponseModel", "RequestResponseModel\RequestResponseModel.csproj", "{6EDB3DF9-C46F-4FE7-8CE0-94BA31C134D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RequestResponseModel", "RequestResponseModel\RequestResponseModel.csproj", "{6EDB3DF9-C46F-4FE7-8CE0-94BA31C134D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{FBEB0E6C-A2E0-4F72-A80F-5BB8F79A500C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "Utility\Utility.csproj", "{FBEB0E6C-A2E0-4F72-A80F-5BB8F79A500C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
