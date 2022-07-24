@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using YungChingWebAPI.Helper;
 
 namespace YungChingWebAPI {
 	public static class NativeInjectorConfig {
@@ -13,6 +14,8 @@ namespace YungChingWebAPI {
             //註冊http
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            //註冊Jwt
+            services.AddSingleton<JwtHelper>();
             //TODO
             //services.AddTransient<Func<int, IAnimalService>>(serviceProvider => key =>
             //{

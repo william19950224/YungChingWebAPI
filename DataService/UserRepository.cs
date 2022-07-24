@@ -29,6 +29,15 @@ namespace RepositoryService {
 			}
 			return result;
 		}
+		public User GetUser(string account, string pwd) {
+			var result = new User();
+			using (SqlConnection conn = new SqlConnection(ConnString)) {
+				var value = new { Account = account, PassWord= pwd };
+				string strSql = "Select * from [User] where 1=1  and Account =@Account and PassWord =@PassWord  " + BaseConst.valid_isdel;
+				result = conn.Query<User>(strSql, value).FirstOrDefault();
+			}
+			return result;
+		}
 		public int InsertUser(UserRequest userModel) {
 			int result = 0;
 			using (SqlConnection conn = new SqlConnection(ConnString)) {

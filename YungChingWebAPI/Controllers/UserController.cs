@@ -1,4 +1,5 @@
 ﻿using LogicService.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RequestResponseModel.Request;
 using RequestResponseModel.Response;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace YungChingWebAPI.Controllers {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]/[action]")]
     public class UserController : ControllerBase {
@@ -16,6 +18,11 @@ namespace YungChingWebAPI.Controllers {
 
         public UserController(IUserService service) {
             this._service = service;
+        }
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<RServiceProvider<List<UserResponse>>> UserInfo2() {
+            return await _service.GetUsers();
         }
         [HttpGet]
         public async Task<RServiceProvider<List<UserResponse>>> UserInfo() {

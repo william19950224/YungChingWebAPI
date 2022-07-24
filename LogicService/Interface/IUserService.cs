@@ -20,6 +20,12 @@ namespace LogicService.Interface {
         /// <returns></returns>
         Task<RServiceProvider<UserResponse>> GetUser(long id);
         /// <summary>
+        /// 使用者 查詢單筆 帳號
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task<RServiceProvider<UserResponse>> GetUser(string account,string pwd);
+        /// <summary>
         /// 使用者 新增
         /// </summary>
         /// <param name="request"></param>

@@ -26,11 +26,11 @@ namespace LogicService.Service {
                 List<User> modelList = new List<User>();
                 List<UserResponse> responsesModelList = new List<UserResponse>();
                 modelList = userRepository.GetAllUser();
-                rsp.Success = true;
                 if (modelList != null && modelList.Count > 0) {
                     Mapper.Map<List<User>, List<UserResponse>>(modelList, responsesModelList);
                     rsp.ReturnCode = RetCode.Success.ToString();
                     rsp.HasResult = true;
+                    rsp.Success = true;
                     rsp.Result = responsesModelList;
                 }
             } catch (Exception ex) {
@@ -52,11 +52,11 @@ namespace LogicService.Service {
                 User model = new User();
                 UserResponse responsesModel = new UserResponse();
                 model = userRepository.GetUser(id);
-                rsp.Success = true;
                 if (model != null) {
                     Mapper.Map<User, UserResponse>(model, responsesModel);
                     rsp.ReturnCode = RetCode.Success.ToString();
                     rsp.HasResult = true;
+                    rsp.Success = true;
                     rsp.Result = responsesModel;
                 }
             } catch (Exception ex) {
@@ -66,7 +66,31 @@ namespace LogicService.Service {
             }
             return rsp;
         }
-
+        /// <summary>
+        /// 取某使用者 帳號
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public async Task<RServiceProvider<UserResponse>> GetUser(string account, string pwd) {
+            RServiceProvider<UserResponse> rsp = new RServiceProvider<UserResponse>();
+            try {
+                User model = new User();
+                UserResponse responsesModel = new UserResponse();
+                model = userRepository.GetUser(account, pwd);
+                if (model != null) {
+                    Mapper.Map<User, UserResponse>(model, responsesModel);
+                    rsp.ReturnCode = RetCode.Success.ToString();
+                    rsp.HasResult = true;
+                    rsp.Success = true;
+                    rsp.Result = responsesModel;
+                }
+            } catch (Exception ex) {
+                rsp.Success = false;
+                rsp.Message = ex.Message;
+                rsp.ReturnCode = ((int)Utility.Enums.RetCode.Exception).ToString();
+            }
+            return rsp;
+        }
         /// <summary>
         /// 塞入某使用者
         /// </summary>
