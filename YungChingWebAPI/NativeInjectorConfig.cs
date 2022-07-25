@@ -11,8 +11,6 @@ using YungChingWebAPI.Helper;
 namespace YungChingWebAPI {
 	public static class NativeInjectorConfig {
         public static void RegisterServices(this IServiceCollection services) {
-            //註冊http
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             //註冊Jwt
             services.AddSingleton<JwtHelper>();

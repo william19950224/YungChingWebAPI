@@ -1,0 +1,22 @@
+FROM image-hub.tutorabc.com/library/dotnet/core/sdk:3.1-official
+ARG ENV_TAG
+
+
+WORKDIR /publish
+EXPOSE 10083
+RUN mkdir -p /tmp
+
+COPY . /tmp
+
+#RUN cd /tmp && dotnet restore YungChingWebAPI.sln && dotnet publish YungChingWebAPI/YungChingWebAPI.csproj  -o /publish
+RUN cd /tmp && dotnet restore YungChingWebAPI.sln
+RUN ls -al .
+ARG ENV_TAG
+RUN cp Repository/App.config.${ENV_TAG} Repository/App.config
+RUN cp YungChingWebAPI/appsettings.${ENV_TAG}.json YungChingWebAPI/appsettings.json
+
+RUN cd /tmp && dotnet publish YungChingWebAPI/YungChingWebAPI.csproj  -o /publish
+
+ENV ASPNETCORE_URLS http://*:10083
+
+ENTRYPOINT ["dotnet", "YungChingWebAPI.dll"]
