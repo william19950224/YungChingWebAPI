@@ -2,6 +2,7 @@
 using LogicService.Interface;
 using RepositoryModel.Entity;
 using RepositoryService;
+using RepositoryService.Interface;
 using RequestResponseModel.Request;
 using RequestResponseModel.Response;
 using System;
@@ -12,7 +13,11 @@ using Utility.Enums;
 
 namespace LogicService.Service {
     public class UserService : IUserService {
-        UserRepository userRepository = new UserRepository();
+        internal IUserRepository _userRepository;
+
+        public UserService(IUserRepository repository) {
+            this._userRepository = repository;
+        }
         #region 使用者
 
         /// <summary>
@@ -25,7 +30,7 @@ namespace LogicService.Service {
             try {
                 List<User> modelList = new List<User>();
                 List<UserResponse> responsesModelList = new List<UserResponse>();
-                modelList = userRepository.GetAllUser();
+                modelList = _userRepository.GetAllUser();
                 if (modelList != null && modelList.Count > 0) {
                     Mapper.Map<List<User>, List<UserResponse>>(modelList, responsesModelList);
                     rsp.ReturnCode = RetCode.Success.ToString();
@@ -51,7 +56,7 @@ namespace LogicService.Service {
             try {
                 User model = new User();
                 UserResponse responsesModel = new UserResponse();
-                model = userRepository.GetUser(id);
+                model = _userRepository.GetUser(id);
                 if (model != null) {
                     Mapper.Map<User, UserResponse>(model, responsesModel);
                     rsp.ReturnCode = RetCode.Success.ToString();
@@ -76,7 +81,7 @@ namespace LogicService.Service {
             try {
                 User model = new User();
                 UserResponse responsesModel = new UserResponse();
-                model = userRepository.GetUser(account, pwd);
+                model = _userRepository.GetUser(account, pwd);
                 if (model != null) {
                     Mapper.Map<User, UserResponse>(model, responsesModel);
                     rsp.ReturnCode = RetCode.Success.ToString();
@@ -100,7 +105,7 @@ namespace LogicService.Service {
             RServiceProvider<int> rsp = new RServiceProvider<int>();
             try {
                 int resultId = 0;
-                resultId = userRepository.InsertUser(request);
+                resultId = _userRepository.InsertUser(request);
                 if (resultId != 0) {
                     rsp.Success = true;
                     rsp.ReturnCode = RetCode.Success.ToString();
@@ -123,16 +128,16 @@ namespace LogicService.Service {
             RServiceProvider<int> rsp = new RServiceProvider<int>();
             try {
                 int resultId = 0;
-                var userModel = userRepository.GetUser(id);
+                var userModel = _userRepository.GetUser(id);
                 //如有資料則update
                 if (id != 0 && userModel!=null) {
                     request.Id = id;
-                    resultId = userRepository.ModifyUser(request);
+                    resultId = _userRepository.ModifyUser(request);
                     if (resultId != 0) {
                         rsp.Result = resultId;
                     }
                 } else {
-                    resultId = userRepository.InsertUser(request);
+                    resultId = _userRepository.InsertUser(request);
                     if (resultId != 0) {                       
                         rsp.Result = resultId;
                     }
@@ -157,7 +162,7 @@ namespace LogicService.Service {
             RServiceProvider<int> rsp = new RServiceProvider<int>();
             try {
                 int resultId = 0;
-                resultId = userRepository.DeleteUser(id);
+                resultId = _userRepository.DeleteUser(id);
                 if (resultId != 0) {
                     rsp.Success = true;
                     rsp.ReturnCode = RetCode.Success.ToString();

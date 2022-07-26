@@ -8,7 +8,6 @@ RUN mkdir -p /tmp
 
 COPY . /tmp
 
-#RUN cd /tmp && dotnet restore YungChingWebAPI.sln && dotnet publish YungChingWebAPI/YungChingWebAPI.csproj  -o /publish
 RUN cd /tmp && dotnet restore YungChingWebAPI.sln
 RUN ls -al .
 ARG ENV_TAG

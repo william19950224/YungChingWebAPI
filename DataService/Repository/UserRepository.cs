@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using RepositoryModel.Entity;
+using RepositoryService.Interface;
 using RequestResponseModel.Request;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ using System.Text;
 using Utility.Const;
 
 namespace RepositoryService {
-	public class UserRepository: BaseRepository {
+	public class UserRepository: BaseRepository,IUserRepository {
 
-        public  List<User> GetAllUser() {
+		public  List<User> GetAllUser() {
 			var results = new List<User>();
 			using (SqlConnection conn = new SqlConnection(ConnString)) {
 				string strSql = "Select * from [User] where 1=1  " + BaseConst.valid_isdel;

@@ -2,6 +2,8 @@
 using LogicService.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using RepositoryService;
+using RepositoryService.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,8 +31,11 @@ namespace YungChingWebAPI {
 
             //});
 
-            ////進行註冊
+            ////注入 service
             services.AddScoped<IUserService, UserService>();
+
+            //注入repository
+            services.AddScoped<IUserRepository, UserRepository>();
         }
     }
 }
